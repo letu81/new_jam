@@ -1,7 +1,4 @@
-# 深圳市佳安美光学有限公司 
-gxboli.cn 
-
-bundle install
+bundle update
 bundle exec rake db:create
 bundle exec rake db:migrate
 bundle exec rake db:seed

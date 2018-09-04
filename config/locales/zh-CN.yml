@@ -1,0 +1,61 @@
+"zh-CN":
+  activerecord:
+    models:
+      user: "用户"
+      admin: "管理员"
+      product: "产品"
+      admin_user: "管理员"
+      partner: "合作伙伴"
+      post: "新闻"
+      dynamic: "动态"
+      carousel: "展播"
+      customize_product: "定制"
+    attributes:
+      admin_user:
+        email: "邮箱"
+        password: "密码"
+        current_password: "旧密码"
+        password_confirmation: "确认密码"
+        current_sign_in_at: "最新登录时间"
+        current_sign_in_ip: "最新登录IP"
+        last_sign_in_at: "上次登录时间"
+        last_sign_in_ip: "上次登录IP"
+        sign_in_count: "登录次数"
+        created_at: "创建时间"
+        updated_at: "更新时间"
+      product:
+        title: "产品名"
+        intro: "简介"
+        keywords: "关键词"
+        description: "详细描述"
+        images: "产品封面"
+        detail_images: "产品描述图"
+        visible: "是否显示"
+      customize_product:
+        title: "定制名"
+        intro: "简介"
+        keywords: "关键词"
+        description: "定制描述"
+        images: "定制封面"
+        detail_images: "定制描述图"
+        visible: "是否显示"
+      partner:
+        title: "公司全称"
+        web_url: "网站地址"
+        visible: "是否显示"
+      post:
+        title: "新闻标题"
+        description: "新闻内容"
+        visible: "是否显示"
+      dynamic:
+        title: "动态标题"
+        description: "动态内容"
+        web_url: "链接地址"
+        visible: "是否显示"
+      carousel:
+        tag: "标签"
+        images: "展播图片"
+        visible: "是否显示"
+      customize:
+        visible: "是否显示"
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>旺科达 - 行业动态</title>
+  <link rel="shortcut icon" href="<%= image_path('favicon.ico') %>" />
+  <meta name="keywords" content="深圳，旺科达，深圳旺科达，玻璃十大品牌，专业生产玻璃制造商，玻璃厂家, 出口，外贸，电子视窗片，光学菱镜片，光学球面镜片，光学柱面镜片，水晶彩色镜片，玻璃盖板，玻璃加工" />
+  <meta name="description" content="深圳，旺科达，深圳旺科达，玻璃十大品牌，专业生产玻璃制造商，玻璃厂家, 出口，外贸，原厂，专业，材料，肖特材料，B270，K9材料，康宁材料，超白玻璃" />
+  <meta name="baidu-site-verification" content="kZBgoRwKlb" />
+  <%= stylesheet_link_tag 'animate', 'bootsnav', 'bootstrap.min', 'font-awesome.min', 'home/style', 'dynamics' %>
+
+  <!-- share start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+  <!-- share end -->
+  
+  <%= javascript_include_tag 'jquery-2.1.1.min',
+                             'bootstrap.min',
+                             'bootsnav' %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'respond.min.js', 'html5shiv.min.js' %>
+  <![endif]-->
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- header start -->
+<div id="header">
+  <%= render 'share/header' %>
+</div>
+<!-- header end -->
+
+<!-- news start -->
+<div class="jam-index-customize jam-index-body">
+  <div class="container">
+    <div class="row">
+      <div class="area-title">
+        <h3 class="visible" data-plugin="appear" data-animate="fade" data-repeat="false">行业动态</h3>
+        <p class="desc visible" data-plugin="appear" data-animate="fade" data-repeat="false"> Dynamic</p>
+      </div>
+
+      <div class="index_customize">
+        <div class="section">
+          <div class="dynamic">
+            <%- @dynamics.each do |dynamic| -%>
+              <dl>
+                <dt>
+                  <em><%= dynamic.created_at.strftime('%m-%d') %></em>
+                  <span><%= dynamic.created_at.strftime('%Y') %></span>
+                </dt>
+                <dd>
+                  <div class="con">
+                    <h3><%= link_to dynamic.title, dynamic_path(dynamic) %></h3>
+                    <p><%= truncate(strip_tags(dynamic.description), length: 60) %></p>
+                  </div>
+                </dd>
+              </dl>
+            <%- end -%>
+            </div>
+          </div>
+        </div>
+        <div class="center">
+          <%= paginate @dynamics %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- news end -->
+
+<!-- footer start -->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+<!-- footer end -->
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>佳安美 - 订购流程</title>
+  <link rel="shortcut icon" href="<%= image_path('favicon.ico') %>" />
+  <meta name="keywords" content="开门自动调用监控截图，防撬报警，低电量提醒，远程开门，实时监控，门锁各种记录随时可查询，佳安美，深圳佳安美，智能家居，智能安防，智能网关，人脸锁，智能锁，指纹锁，密码锁，电子锁，公寓锁，酒店锁，十大知名品牌，app开锁，远程开锁，wifi，zigbee，蓝牙，433，RFID，射频识别，低功耗，无线，热点，六合一，双向，方案，定制，公众号，小程序" />
+  <meta name="description" content="王力，盼盼，天地钩，万能互换，代理，加盟，记录，安全，便捷，省心，稳定，实惠，性价比高，好用，简洁，推荐，淘宝，天猫，京东，网购，值得买，优惠，团购，直销，原厂，专业，厂家直销" />
+  <meta name="baidu-site-verification" content="M5LupMKJIr" />
+  <%= stylesheet_link_tag 'animate', 'bootsnav', 'bootstrap.min', 'font-awesome.min', 'home/style' %>
+
+  <!-- share start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+  <!-- share end -->
+
+  <%= javascript_include_tag 'jquery-2.1.1.min',
+                             'bootstrap.min',
+                             'bootsnav' %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'respond.min.js', 'html5shiv.min.js' %>
+  <![endif]-->
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- header start -->
+<div id="header">
+  <%= render 'share/header' %>
+</div>
+<!-- header end -->
+
+<!-- faq start -->
+<div class="jam-index-customize jam-index-body">
+  <div class="container">
+    <div class="row">
+      <div class="area-title">
+        <h3 class="visible" data-plugin="appear" data-animate="fade" data-repeat="false">订购流程</h3>
+        <p class="desc visible" data-plugin="appear" data-animate="fade" data-repeat="false"> Order</p>
+        </a>
+      </div>
+
+      <div class="index_customize">
+        <div class="section">
+          <div class="affairs">
+            <div class="sw">
+              <dl>
+                <dt>1. 初步沟通</dt>
+                <dd>a. 客户/采购口头、传真、来电来访，公司客服/销售沟通；</dd>
+                <dd>b. 由公司客服/销售专员书面记录客户/采购的公司信息指纹锁材质、规格、加工要求等信息；</dd>
+                <dd>c. 由客户/销售提交客户信息备忘录到公司审核；</dd>
+              </dl>
+              <dl>
+                <dt>2. 意向方案</dt>
+                <dd>a: 对客户/采购公司进行了解；审核评估制定最合理的方案；给出最专业的意见；</dd>
+                <dd>b. 审核通过，有公司客服/业务专员继续保持与客户、采购沟通、直到完成订单；</dd>
+                <dd>c. 审核未通过，不符合条件、先告知公司客服/销售专员与客户/采购沟通；</dd>
+              </dl>
+              <dl>
+                <dt>3. 打样确认</dt>
+                <dd>a. 根据客户/采购提供的玻璃材质、规格、加工要求进行打样确认是否符合客户/采购要求（注：非标产品前期收取部分打样费；后期批量订单下来后返还/冲减货款）；</dd>
+                <dd>b. 由公司客服/销售专员跟进客户测试情况；</dd>
+              </dl>
+              <dl>
+                <dt>4. 签订合同</dt>
+                <dd>a. 样品确认合格后，由公司客户/销售专员进行沟通；</dd>
+                <dd>b. 签订合同：确认合同条款、玻璃加工要求、价格、数量、交期，由公司客户/销售专员代公司与客户/采购签订合同。（注：如前期支付过打样费；本次签订合同时给予返还/冲减货款）；</dd>
+                <dd>c. 公司客服/销售以书面传真/邮件等形式发送给客户盖章确认回传；</dd>
+              </dl>
+              <dl>
+                <dt>5. 生产发货</dt>
+                <dd>a. 确认定金到位后，下达客户生产指令单；</dd>
+                <dd>b. 公司跟生产技术进行确认，并对客户/采购进行分类制作；</dd>
+                <dd>c. 公司客服/销售专员跟踪生产过程、监督；</dd>
+                <dd>d. 订单的交期、数量、包装确认合格；</dd>
+                <dd>e. 生成成品交库单，同时通知销售/客服、发货员、仓库管理员发货；</dd>
+                <dd>f. 财务确认余款到账后发货；</dd>
+                <dd>g. 开具销售送货单，送货或快递/物流发货；</dd>
+                <dd>h. 公司客服/销售专员以发货告知书通知客户/采购；</dd>
+                <dd>i. 由客服人员跟踪快递/物流到货时间，并进行书面记录；</dd>
+              </dl>
+              <dl>
+                <dt>6. 客户签收</dt>
+                <dd>a. 由客服/销售以书面、来电与客户进行确认；</dd>
+                <dd>b. 按合同协议规定验收标准验货；如无任何问题则交付使用；</dd>
+                <dd>c. 若有问题则针对问题进行售后服务解决问题；</dd>
+              </dl> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- faq end -->
+
+<!-- footer start -->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+<!-- footer end -->
+</body>
+</html>

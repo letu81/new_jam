@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>佳安美 - 关于我们</title>
+  <link rel="shortcut icon" href="<%= image_path('favicon.ico') %>" />
+  <meta name="keywords" content="开门自动调用监控截图，防撬报警，低电量提醒，远程开门，实时监控，门锁各种记录随时可查询，佳安美，深圳佳安美，智能家居，智能安防，智能网关，人脸锁，智能锁，指纹锁，密码锁，电子锁，公寓锁，酒店锁，十大知名品牌，app开锁，远程开锁，wifi，zigbee，蓝牙，433，RFID，射频识别，低功耗，无线，热点，六合一，双向，方案，定制，公众号，小程序" />
+  <meta name="description" content="王力，盼盼，天地钩，万能互换，代理，加盟，记录，安全，便捷，省心，稳定，实惠，性价比高，好用，简洁，推荐，淘宝，天猫，京东，网购，值得买，优惠，团购，直销，原厂，专业，厂家直销" />
+  <meta name="baidu-site-verification" content="M5LupMKJIr" />
+  <%= stylesheet_link_tag 'animate', 'bootsnav', 'bootstrap.min', 'font-awesome.min', 'home/style' %>
+  <!-- share start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+  <!-- share end -->
+
+  <%= javascript_include_tag 'jquery-2.1.1.min',
+                             'bootstrap.min',
+                             'bootsnav' %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'respond.min.js', 'html5shiv.min.js' %>
+  <![endif]-->
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- header start -->
+<div id="header">
+  <%= render 'share/header' %>
+</div>
+<!-- header end -->
+
+<!-- about start -->
+<div class="jam-index-customize jam-index-body">
+  <div class="container">
+    <div class="row">
+      <div class="area-title">
+        <h3 class="visible" data-plugin="appear" data-animate="fade" data-repeat="false">公司简介</h3>
+        <p class="desc visible" data-plugin="appear" data-animate="fade" data-repeat="false"> About</p>
+        </a>
+      </div>
+
+      <div class="index_customize">
+        <div class="section">
+          <p class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳市佳安美智能科技有限公司专业从事智能家居，智能安防的技术研发和推广的重点高科技型企业，是一家集科研、生产、设计、销售和服务为一体的专业化公司。 主要产品有各类智能家电、智能指纹密码锁、智能防盗门、智能指纹保管箱等，公司拥有专业的技术研发团队与生产实力为广大家庭致力打造智能家居安防生活，“佳安美”系列产品有价格低廉、安装方便、实用性强等显著优点。为真正普及和推广智能家居，智能安防事业奠定坚实的基础。</p>       
+          <p class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司自成立以来，在生产上始终以“今日的质量，明日的市场”为宗旨，在销售上始终坚持“诚信至上，服务万家”的经营理念，以优质的品质，齐全的品种，合理的价格，完善的售后服务，赢得了广大用户的信赖和赞誉，我们诚挚的欢迎各界人士的加入，共同发展，共创辉煌！</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- about end -->
+
+
+<!-- milestone start -->
+<div class="jam-index-customize jam-index-body">
+  <div class="container">
+    <div class="row">
+      <div class="area-title">
+        <h3 class="visible" data-plugin="appear" data-animate="fade" data-repeat="false">成长历程</h3>
+        <p class="desc visible" data-plugin="appear" data-animate="fade" data-repeat="false"> Milestone</p>
+        </a>
+      </div>
+
+      <div class="index_customize">
+        <div class="aboutcon">
+          <dl class="rt">
+            <dt class="cor1"><em>2014年5月</em></dt>
+            <dd><p>公司成立</p></dd>
+          </dl>
+          <dl>
+            <dt class="cor2"><em>2014年11月</em></dt>
+            <dd><p>专注于智能家居、指纹锁的研发生成</p></dd>
+          </dl>
+          <dl class="rt">
+            <dt class="cor3"><em>2015年12月</em></dt>
+            <dd><p>佳安美2.0上线</p></dd>
+          </dl>
+          <dl>
+            <dt class="cor2"><em>2016年7月</em></dt>
+            <dd><p>佳安美智控1.0上线</p></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- milestone end -->
+
+<!-- footer start -->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+<!-- footer end -->
+</body>
+</html>

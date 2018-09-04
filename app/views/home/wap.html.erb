@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>佳安美智控 - 安全、便捷、更省心</title>
+  <link rel="shortcut icon" href="<%= image_path('favicon.ico') %>" />
+  <meta name="keywords" content="开门自动调用监控截图、防撬报警、低电量提醒、远程开门、实时监控、门锁各种记录随时可查询" />
+  <meta name="description" content="佳安美，王力，盼盼，天地钩，万能互换，代理，加盟，六合一，记录，安全，便捷，省心，稳定，实惠，性价比高，好用，简洁，推荐，淘宝，天猫，京东，网购，值得买，优惠，团购，直销，原厂，专业" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="baidu-site-verification" content="M5LupMKJIr" />
+  <%= javascript_include_tag 'jquery-2.1.1.min', 'wap/swiper.min', 'wap/jquery.modal' %>
+  <%= stylesheet_link_tag 'wap' %>
+</head>
+<body>
+<div class="overlay"></div>
+<div id="modal1" class="modal">
+  <%#= image_tag('wap/QR-ode.png') %></div>
+<div class="swiper-container">
+  <div class="header-top">
+    <a href="/">
+      <span class="white">佳安美智控</span>
+    </a>
+  </div>
+  <div class="swiper-wrapper">
+    <section class="swiper-slide swiperbj-a ">
+      <div class="swiper-Download ">
+        <a href="https://itunes.apple.com/us/app/%E4%BD%B3%E5%AE%89%E7%BE%8E%E6%99%BA%E6%8E%A7/id1314751955?l=zh&ls=1&mt=8" class="swiper-Download-a" title="请在app store中打开" target="_blank"><%= image_tag('wap/ios.png', class: 'resize') %></a>
+        <a href="http://www.jiaanmei.com/download" class="swiper-Download-b"><%= image_tag('wap/android.png', class: 'resize') %></a>
+      </div>
+    </section>
+<!--
+    <section class="swiper-slide swiperbj-b">
+      <div class="swiper-Downloada">
+      </div>
+    </section> -->
+  </div>
+  <%= image_tag('wap/arrow.png', id: 'array', class: 'pages') %>
+</div>
+
+<div class="weixin-tip">
+    <p>
+      <img src="<%= image_path("wap/live_weixin.png")%>" alt="微信打开">
+    </p>
+</div>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        mousewheelControl: true
+    })
+
+    function is_weixin() {
+      var ua = window.navigator.userAgent.toLowerCase();
+      if (ua.match(/MicroMessenger/i) == "micromessenger") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function is_ios() {
+      var ua = window.navigator.userAgent.toLowerCase();
+      if (ua.match(/(iPhone|iPod|ios|iOS|iPad)/i)) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    $(function() {
+        var isWeixin = is_weixin();
+        var winHeight = $(window).height();
+        if(isWeixin){
+          if (!is_ios) {
+            $(".weixin-tip").css("height",winHeight);
+            $(".weixin-tip").show();
+          }
+        }
+    });
+</script>
+</body>
+</html>

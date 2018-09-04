@@ -1,0 +1,213 @@
+// Place all the styles related to the dynamics controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@media (min-width: 1280px) {
+    .dynamic {
+	   width: 1200px;
+	}
+
+    .dynamic dl dt {
+	  float: left;
+	  width: 100px;
+	}
+
+    .dynamic dl dt em {
+	  color: #00c6ff;
+	  display: inline-block;
+	  font-size: 24px;
+	  margin-top: -10px;
+	  margin-right: 5px;
+	}
+
+	.dynamic dl dt span {
+	  display: block;
+	  color: #d4d4d4;
+	  font-size: 30px;
+	  margin-top: 10px;
+	  line-height: 20px;
+	}
+
+	.section img {
+	  max-width:1080px;
+	}
+}
+
+@media (min-width: 1200px) and (max-width: 1279px) {
+    .dynamic {
+	  min-width: 1100px;
+	}
+
+	.dynamic dl dt {
+	  float: left;
+	  width: 100px;
+	}
+
+    .dynamic dl dt em {
+	  color: #00c6ff;
+	  display: inline-block;
+	  font-size: 24px;
+	  margin-top: -10px;
+	  margin-right: 5px;
+	}
+
+	.dynamic dl dt span {
+	  display: block;
+	  color: #d4d4d4;
+	  font-size: 30px;
+	  margin-top: 10px;
+	  line-height: 20px;
+	}
+
+	.section img {
+	  max-width:1000px;
+	}
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    .dynamic {
+	  min-width: 940px;
+	}
+
+    .dynamic dl dt {
+	  float: left;
+	  width: 100px;
+	}
+
+    .dynamic dl dt em {
+	  color: #00c6ff;
+	  display: inline-block;
+	  font-size: 24px;
+	  margin-top: -10px;
+	  margin-right: 5px;
+	}
+
+	.dynamic dl dt span {
+	  display: block;
+	  color: #d4d4d4;
+	  font-size: 30px;
+	  margin-top: 10px;
+	  line-height: 20px;
+	}
+
+	.section img {
+	  max-width:840px;
+	}
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+    .dynamic {
+	  min-width: 740px;
+	}
+
+	.dynamic dl dt {
+	  float: left;
+	  width: 100px;
+	}
+
+    .dynamic dl dt em {
+	  color: #00c6ff;
+	  display: inline-block;
+	  font-size: 22px;
+	  margin-right: 5px;
+	}
+
+	.dynamic dl dt span {
+	  display: block;
+	  color: #d4d4d4;
+	  font-size: 24px;
+	  line-height: 20px;
+	}
+
+    .section img {
+	  max-width:680px;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+    .dynamic {
+	  min-width: 540px;
+	}
+
+	.dynamic dl dt {
+	  float: left;
+	  width: 100px;
+	}
+
+    .dynamic dl dt em {
+	  color: #00c6ff;
+	  display: inline-block;
+	  font-size: 20px;
+	  margin-right: 5px;
+	}
+
+	.dynamic dl dt span {
+	  display: block;
+	  color: #d4d4d4;
+	  font-size: 22px;
+	  line-height: 20px;
+	}
+
+    .section img {
+	  max-width:480px;
+	}
+}
+
+@media (min-width: 401px) and (max-width: 599px) {
+    .dynamic dl dt {
+	  float: left;
+	  width: 80px;
+	}
+
+    .dynamic dl dt em {
+	  color: #00c6ff;
+	  display: inline-block;
+	  font-size: 18px;
+	  margin-right: 5px;
+	}
+
+	.dynamic dl dt span {
+	  display: block;
+	  color: #d4d4d4;
+	  font-size: 20px;
+	  line-height: 20px;
+	}
+}
+
+@media (max-width: 400px) {
+	.section img {
+	  max-width:300px;
+	}
+
+	.dynamic dl dt {
+	  float: left;
+	  width: 80px;
+	  margin-top: 10px;
+	}
+
+    .dynamic dl dt em {
+	  color: #00c6ff;
+	  display: inline-block;
+	  font-size: 18px;
+	  margin-right: 5px;
+	}
+
+	.dynamic dl dt span {
+	  display: block;
+	  color: #d4d4d4;
+	  font-size: 20px;
+	  line-height: 20px;
+	}
+}
+
+@media (min-width: 401px) and (max-width: 500px) {
+	.section img {
+	  max-width:300px;
+	}
+}
+
+@media (min-width: 501px) and (max-width: 599px) {
+	.section img {
+	  max-width:380px;
+	}
+}

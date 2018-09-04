@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>佳安美 - 售后服务</title>
+  <link rel="shortcut icon" href="<%= image_path('favicon.ico') %>" />
+  <meta name="keywords" content="开门自动调用监控截图，防撬报警，低电量提醒，远程开门，实时监控，门锁各种记录随时可查询，佳安美，深圳佳安美，智能家居，智能安防，智能网关，人脸锁，智能锁，指纹锁，密码锁，电子锁，公寓锁，酒店锁，十大知名品牌，app开锁，远程开锁，wifi，zigbee，蓝牙，433，RFID，射频识别，低功耗，无线，热点，六合一，双向，方案，定制，公众号，小程序" />
+  <meta name="description" content="王力，盼盼，天地钩，万能互换，代理，加盟，记录，安全，便捷，省心，稳定，实惠，性价比高，好用，简洁，推荐，淘宝，天猫，京东，网购，值得买，优惠，团购，直销，原厂，专业，厂家直销" />
+  <meta name="baidu-site-verification" content="M5LupMKJIr" />
+  <%= stylesheet_link_tag 'animate', 'bootsnav', 'bootstrap.min', 'font-awesome.min', 'home/style' %>
+
+  <!-- share start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+  <!-- share end -->
+
+  <%= javascript_include_tag 'jquery-2.1.1.min',
+                             'bootstrap.min',
+                             'bootsnav' %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'respond.min.js', 'html5shiv.min.js' %>
+  <![endif]-->
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- header start -->
+<div id="header">
+  <%= render 'share/header' %>
+</div>
+<!-- header end -->
+
+<!-- service start -->
+<div class="jam-index-customize jam-index-body">
+  <div class="container">
+    <div class="row">
+      <div class="area-title">
+        <h3 class="visible" data-plugin="appear" data-animate="fade" data-repeat="false">售后服务</h3>
+        <p class="desc visible" data-plugin="appear" data-animate="fade" data-repeat="false"> Service</p>
+        </a>
+      </div>
+
+      <div class="index_customize">
+        <div class="">
+          <div class="service-content">
+            <div class="cus_serv">
+              <ul class="block">
+                <li class="promise">
+                  <div class="row">
+                    <ul>
+                      <li class="ol-md-4 col-xs-4">
+                        <%= image_tag('service/seven.png') %>
+                        <p class="prop">7天退货保障</p>
+                      </li>
+                      <li class="ol-md-4 col-xs-4">
+                        <%= image_tag('service/exchange.png') %>
+                        <p class="prop">15天换货承诺</p>
+                      </li>
+                      <li class="ol-md-4 col-xs-4">
+                        <%= image_tag('service/maintain.png') %>
+                        <p class="prop">1年免费维护</p>
+                      </li>
+                    </ul>
+                  <div>
+                </li>
+
+                <li>
+                  <p> 退货流程</p>
+                  <%= image_tag('service/cus_serv.png') %>
+                </li>
+
+                <li>
+                  <p>邮寄资料</p>
+                  <ul class="con_info">
+                    <li>收件人：廖小姐</li>
+                    <li>联系电话：1518837820</li>
+                    <li>收件地址：深圳市宝安区松岗芙蓉路9号A区7楼（桃花源科技园松岗分园）</li>
+                    <li>邮编：518105</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- service end -->
+
+<!-- footer start -->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+<!-- footer end -->
+</body>
+</html>

@@ -1,0 +1,17 @@
+"zh-CN":
+  active_admin:
+    # powered_by: "Copyright 2016 佳安美"
+    batch_actions:
+      labels:
+        dashboard: "佳安美"
+        block: "禁用"
+        unblock: "启用"
+        sale: "上架"
+        unsale: "下架"
+        cancel: '订单取消'
+        ship: '订单配送'
+        complete: '订单完成'
+    filters:
+      predicates:
+        from: "开始时间"
+        to: "结束时间"

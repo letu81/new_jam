@@ -1,0 +1,117 @@
+<div class="container">
+  <div class="footer-section">
+    <div class="row">
+      <div class="col-xs-offset-1"> <!-- <div class="col-md-12"> -->
+        <div class="col-md-3 col-sm-6 footer-menu">
+          <ul>
+            <li>
+              <h3>关于佳安美</h3>
+            </li>
+            <li>
+              <a href="/about">关于佳安美</a>
+            </li>
+            <li>
+              <a href="/contact">联系我们</a>
+            </li>
+            <li>
+              <a href="/jobs">诚聘英才</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 footer-menu">
+          <ul >
+            <li>
+              <h3>行业动态</h3>
+            </li>
+            <li>
+              <a href="/dynamics">行业动态</a>
+            </li>
+            <li>
+              <a href="/news">新闻与杂志</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 footer-menu">
+          <ul >
+            <li>
+              <h3>订购流程与售后</h3>
+            </li>
+            <li>
+              <a href="/order">订购流程</a>
+            </li>
+            <li>
+              <a href="/service">售后服务</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 footer-menu">
+          <ul>
+            <li>
+              <h3>关注我们</h3>
+            </li>
+            <li>
+              <a class="wechat" href="javascript:void(0)">
+                <i class="fa fa-weixin"></i> 官方微信
+                <%= image_tag('share/wechat.png', :class => 'wx-code', :alt => "jam_mall") %>
+              </a>
+            </li>
+            <li>
+              <a href="http://weibo.com/u/3756654010" title="深圳佳安美">
+                <i class="fa fa-weibo"></i> 新浪微博
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='footer-icp-service'>
+    <span class='icp'>
+      Copyright © 2014-<%= Date.current.year %> Jiaanmei All Rights Reserved | 粤ICP备17072191号
+    </span>
+    <div class="row">
+      <div class="col-md-6 col-md-10 right-move-15">
+        <span class="tel"><i class="fa fa-phone"></i>1518837820</span>
+        <span class="time">周一至周六9:00-21:00</span>
+      </div>
+      <div class="col-md-6 col-md-10 left-move-15">
+        <!-- share start -->
+        <div class="share text-center">
+          <div class="share-component" data-disabled="google,twitter,facebook,diandian,tencent" data-description="『深圳佳安美』专业生成加工指纹做，app、公众号、小程序、企业网站定制">
+            <span class="share">分享到：</span>
+          </div>
+        </div>
+        <!-- share end -->
+      </div>
+    </div>
+  </div>
+
+  <div class='robot'>
+    <a href="tencent://message/?uin=394016672&Site=jiaanmei.com&Menu=yes">
+      <%= image_tag('share/chat.png', :alt => "客服露露") %>
+    </a>
+  </div>
+
+  <button type="button" class="jam-scroll-top animation-slide-bottom"></button>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.loading-page').hide();
+    $(".jam-scroll-top").click(function(){
+      $('html,body').animate({'scrollTop':0},300);
+    });
+    var wh = $(window).height();
+    $(window).scroll(function(){
+      if($(this).scrollTop() > wh){
+        $(".jam-scroll-top").removeClass('hide').addClass("animation-slide-bottom");
+      }else{
+        $(".jam-scroll-top").addClass('hide').removeClass('animation-slide-bottom');
+      }
+    });
+    if(window.console){
+      console.log("联系我们 QQ:1756992323 Wechat:letu86");
+    }
+  });
+</script>

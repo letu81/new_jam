@@ -7,7 +7,7 @@ json.products @products do |product|
   json.title product.title
   json.intro product.intro
   if product.images.size > 0
-    product.images.first.url(:small)
+    json.image product.images.first.url(:small)
   else
     json.image ""
   end
@@ -18,7 +18,7 @@ json.customize @customizes do |product|
   json.title product.title
   json.intro product.intro 
   if product.images.size > 0
-    product.images.first.url(:small)
+    json.image product.images.first.url(:small)
   else
     json.image ""
   end

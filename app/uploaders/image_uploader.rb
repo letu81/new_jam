@@ -3,7 +3,7 @@ require 'digest/md5'
 class ImageUploader < BaseUploader
 
   version :large do
-    process resize_to_fill: [1280, nil]
+    process resize_to_fill: [1280, 640]
   end
   
   version :thumb do

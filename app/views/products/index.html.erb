@@ -49,14 +49,15 @@
         </div>
 
       <% @products.each_with_index do |product, i| %>
+        <%- img_length = product.images.length -%>
         <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-product-item">
           <div class="widget widget-shadow">
             <figure class="widget-header cover">
               <div id="products_<%= i %>_carousel" class="carousel slide">
                 <ol class="carousel-indicators">
-                  <li data-target="#products_<%= i %>_carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#products_<%= i %>_carousel" data-slide-to="1"></li>
-                  <li data-target="#products_<%= i %>_carousel" data-slide-to="2"></li>
+                <%- (0..img_length-1).each do |j| -%>
+                  <li data-target="#products_<%= i %>_carousel" data-slide-to="<%= j %>" class="<%= j==0 ? "active": "" %>"></li>
+                <%- end -%>
                 </ol>
                 <div class="carousel-inner">
                 <%- product.images.each_with_index do |image, index| -%>

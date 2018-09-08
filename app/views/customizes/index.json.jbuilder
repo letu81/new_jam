@@ -4,8 +4,8 @@ end
 
 json.customize @products do |product|
   json.id product.id
-  json.title truncate(strip_tags(product.title), length: 16)
-  json.intro truncate(strip_tags(product.intro), length: 16)
+  json.title truncate(strip_tags(product.title), length: 8)
+  json.intro truncate(strip_tags(product.intro), length: 12)
   if product.images.size > 0
     json.image product.images.first.url(:small)
   else

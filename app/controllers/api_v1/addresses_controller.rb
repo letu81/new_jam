@@ -19,20 +19,20 @@ class ApiV1::AddressesController < ApplicationController
 	end
 
 	def create
-		@address = Address.new(address_params.merge(user_id: params[:user_id]))
+		@address = Address.new(address_params.merge(user_id: current_user.id))
 		if @address.valid? && @address.save
-			return { code: 0, message: "ok" }
+			render json: { code: 0, message: "ok" }
 		else
-			return { code: 1, message: @address.errors.full_messages.to_sentence }
+			render json: { code: 1, message: @address.errors.full_messages.to_sentence }
 		end
 	end
 
 	def update
 		@address = Address.where(user_id: current_user.id, id: params[:id]).first
 		if @address && @address.update(address_params)
-			return { code: 0, message: "ok" }
+			render json: { code: 0, message: "ok" }
 		else
-			return { code: 1, message: @address.errors.full_messages.to_sentence }
+			render json: { code: 1, message: @address.errors.full_messages.to_sentence }
 		end
 	end
 
@@ -40,18 +40,18 @@ class ApiV1::AddressesController < ApplicationController
 		@address = Address.where(user_id: current_user.id, id: params[:id]).first
 		if @address && @address.update_attribute(:is_default, true)
 			Address.where("user_id=? and id!=?", current_user.id, params[:id]).update_all("is_default = false")
-			return { code: 0, message: "ok" }
+			render json: { code: 0, message: "ok" }
 		else
-			return { code: 1, message: "更新失败，没有找到对应地址" }
+			render json: { code: 1, message: "更新失败，没有找到对应地址" }
 		end
 	end
 
     def destory
     	@address = Address.where(user_id: current_user.id, id: params[:id]).first
     	if @address && @address.update_attribute(:disable, true)
-			return { code: 0, message: "ok" }
+			render json: { code: 0, message: "ok" }
 		else
-			return { code: 1, message: "删除失败" }
+			render json: { code: 1, message: "删除失败" }
 		end
     end
 
@@ -67,6 +67,6 @@ class ApiV1::AddressesController < ApplicationController
     end
 
     def address_params
-      params.require(:address).permit(:user_id, :username, :mobile, :address, :post_code, :province_id, :city_id, :district_id)
+        params.require(:address).permit(:user_id, :username, :mobile, :address, :post_code, :province_id, :city_id, :district_id)
     end
 end

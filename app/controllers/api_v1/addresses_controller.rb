@@ -19,9 +19,7 @@ class ApiV1::AddressesController < ApplicationController
 	end
 
 	def create
-		@address = Address.new(user_id: params[:user_id], mobile: params[:mobile], 
-		  username: params[:username], address: params[:address], province_id: params[:province_id],
-		  city_id: params[:city_id], district_id: params[:district_id])
+		@address = Address.new(address_params.merge(user_id: params[:user_id]))
 		if @address.valid? && @address.save
 			return { code: 0, message: "ok" }
 		else
@@ -31,9 +29,7 @@ class ApiV1::AddressesController < ApplicationController
 
 	def update
 		@address = Address.where(user_id: current_user.id, id: params[:id]).first
-		if @address && @address.update({mobile: params[:mobile], username: params[:username], 
-			address: params[:address], province_id: params[:province_id], 
-			city_id: params[:city_id], district_id: params[:district_id]})
+		if @address && @address.update(address_params)
 			return { code: 0, message: "ok" }
 		else
 			return { code: 1, message: @address.errors.full_messages.to_sentence }
@@ -68,5 +64,9 @@ class ApiV1::AddressesController < ApplicationController
 	    if current_user.nil?
 	    	render json: { code: 1, message: "请登录" }, status: 401
 	    end
+    end
+
+    def address_params
+      params.require(:address).permit(:user_id, :username, :mobile, :address, :post_code, :province_id, :city_id, :district_id)
     end
 end

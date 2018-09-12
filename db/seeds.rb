@@ -18,4 +18,6 @@ if Rails.env.development?
   Partner.create!(title: '深圳市芝麻开门电子科技有限公司', visible: true)
   Partner.create!(title: '深圳市前海洛克智慧安防科技股份公司', visible: true)
   Partner.create!(title: '深圳市聪明屋智能家电科技有限公司', visible: true)
+  user = User.create!(name: 'tutu', email: 'tutu@123456', mobile: '15712000000', password: '123456', password_confirmation: '123456')
+  Address.create!(user: user, username: 'test', mobile: '15710000000', post_code: '500015', address: '深圳市南山区创业路')
 end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   mount Redactor2Rails::Engine => '/redactor2_rails'
   #web
   root to: "home#index"
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
   resources :news, only: [:index, :show]
   resources :partners, only: [:index]
   resources :products, only: [:index, :show]
+  resources :addresses, only: [:index, :show, :create, :update, :destroy]
 
   get 'search' => 'search#query', as: :search
 

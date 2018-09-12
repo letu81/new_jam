@@ -20,7 +20,7 @@ class ApiV1::AddressesController < ApplicationController
 
 	def create
 		@address = Address.new(user_id: params[:user_id], mobile: params[:mobile], 
-		  username: params[:username], address: params[:address], province_id: params[:province_id,
+		  username: params[:username], address: params[:address], province_id: params[:province_id],
 		  city_id: params[:city_id], district_id: params[:district_id])
 		if @address.valid? && @address.save
 			return { code: 0, message: "ok" }
@@ -31,9 +31,9 @@ class ApiV1::AddressesController < ApplicationController
 
 	def update
 		@address = Address.where(user_id: current_user.id, id: params[:id]).first
-		if @address && @address.update({mobile: params[:mobile], username: params[:username],
-		  address: params[:address], province_id: params[:province_id,
-		  city_id: params[:city_id], district_id: params[:district_id]})
+		if @address && @address.update({mobile: params[:mobile], username: params[:username], 
+			address: params[:address], province_id: params[:province_id], 
+			city_id: params[:city_id], district_id: params[:district_id]})
 			return { code: 0, message: "ok" }
 		else
 			return { code: 1, message: @address.errors.full_messages.to_sentence }
@@ -43,7 +43,7 @@ class ApiV1::AddressesController < ApplicationController
 	def set_default
 		@address = Address.where(user_id: current_user.id, id: params[:id]).first
 		if @address && @address.update_attribute(:is_default, true)
-			Address.where("user_id=? and id!=?", current_user.id, params[:id]).update_all("is_default = false")			return { code: 0, message: "ok" }
+			Address.where("user_id=? and id!=?", current_user.id, params[:id]).update_all("is_default = false")
 			return { code: 0, message: "ok" }
 		else
 			return { code: 1, message: "更新失败，没有找到对应地址" }

@@ -7,4 +7,10 @@ class User < ApplicationRecord
   validates :mobile, format: { with: /\A1[3|4|5|7|8][0-9]\d{4,8}\z/, message: "请输入11位正确手机号" }, length: { is: 11 },
             :presence => true
   validates :mobile, presence: true
+
+  before_create :generate_authentication_token
+
+  def generate_authentication_token
+    self.authentication_token = Devise.friendly_token
+  end
 end

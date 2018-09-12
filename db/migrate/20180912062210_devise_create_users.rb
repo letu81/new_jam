@@ -34,7 +34,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       t.string :name, null: false, default: ""
       t.string :mobile, null: false, default: ""
-
+      t.string :authentication_token, null: false, default: ""
 
       t.timestamps null: false
     end
@@ -43,6 +43,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
     add_index :users, :reset_password_token, unique: true
     add_index :users, :name,                 unique: true
     add_index :users, :mobile,               unique: true
+    add_index :users, :authentication_token, unique: true
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
   end

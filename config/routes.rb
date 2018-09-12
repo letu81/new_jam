@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   mount Redactor2Rails::Engine => '/redactor2_rails'
   #web
-  root to: "home#index"
+  root to: 'home#index'
 
   get 'home' => 'home#index'
   get 'about' => 'home#about', as: :about
@@ -17,14 +17,28 @@ Rails.application.routes.draw do
   get 'download' => 'download#index', as: :download
   get 'download/:version' => 'download#show', as: :download_version
 
+  get 'search' => 'search#query', as: :search
+
   resources :customizes, only: [:index, :show]
   resources :dynamics, only: [:index, :show]
   resources :news, only: [:index, :show]
   resources :partners, only: [:index]
   resources :products, only: [:index, :show]
-  resources :addresses, only: [:index, :show, :create, :update, :destroy]
 
-  get 'search' => 'search#query', as: :search
+  scope :path => '/api/v1/', :module => "api_v1", :as => 'v1', :defaults => { :format => :json } do
+    resources :auth, only: [] do 
+      collection do
+        post 'login'
+        delete 'logout'
+      end
+    end
+
+    resources :addresses, only: [:index, :show, :create, :update, :destroy] do
+      member do
+        post 'set_default'
+      end
+    end
+  end
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

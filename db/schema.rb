@@ -156,8 +156,10 @@ ActiveRecord::Schema.define(version: 2018_09_12_062210) do
     t.string "last_sign_in_ip"
     t.string "name", default: "", null: false
     t.string "mobile", default: "", null: false
+    t.string "authentication_token", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["authentication_token"], name: "index_users_on_authentication_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["mobile"], name: "index_users_on_mobile", unique: true
     t.index ["name"], name: "index_users_on_name", unique: true

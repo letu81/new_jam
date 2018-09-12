@@ -60,13 +60,10 @@ class ApiV1::AddressesController < ApplicationController
     def authenticate_user_from_token!
 	    if params[:auth_token].present?
 	      	user = User.find_by_authentication_token( params[:auth_token] )
-	      	if user
-	      		sign_in(user, store: false)
-	        else
-	        	return { code: 1, message: "请重新登录" }
-	        end
-	    else
-	    	return { code: 1, message: "请登录" }
+	      	sign_in(user, store: false) if user
+	    end
+	    if current_user.nil?
+	    	render json: { code: 1, message: "请登录" }, status: 401
 	    end
     end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_12_062210) do
+ActiveRecord::Schema.define(version: 2018_09_12_142825) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "namespace"
@@ -36,9 +36,13 @@ ActiveRecord::Schema.define(version: 2018_09_12_062210) do
     t.boolean "disable", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "province_id"
+    t.integer "city_id"
+    t.integer "district_id"
     t.index ["disable"], name: "index_addresses_on_disable"
     t.index ["mobile"], name: "index_addresses_on_mobile"
     t.index ["post_code"], name: "index_addresses_on_post_code"
+    t.index ["province_id", "city_id", "district_id"], name: "index_addresses_on_province_id_and_city_id_and_district_id"
     t.index ["user_id", "disable"], name: "index_addresses_on_user_id_and_disable"
     t.index ["user_id", "is_default"], name: "index_addresses_on_user_id_and_is_default"
     t.index ["user_id"], name: "index_addresses_on_user_id"

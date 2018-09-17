@@ -73,6 +73,8 @@ gem 'actionpack-xml_parser'
 # 状态机
 gem 'state_machine'
 
+gem 'china_region', github: "zupucn/china_region"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

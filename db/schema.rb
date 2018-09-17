@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_12_142825) do
+ActiveRecord::Schema.define(version: 2018_09_17_141556) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "namespace"
@@ -71,6 +71,15 @@ ActiveRecord::Schema.define(version: 2018_09_12_142825) do
     t.boolean "visible", default: false
     t.index ["tag"], name: "index_carousels_on_tag", unique: true
     t.index ["visible"], name: "index_carousels_on_visible"
+  end
+
+  create_table "china_regions", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "code", null: false
+    t.string "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["code"], name: "index_china_regions_on_code", unique: true
+    t.index ["name"], name: "index_china_regions_on_name"
   end
 
   create_table "customize_products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

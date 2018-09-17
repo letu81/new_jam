@@ -4,6 +4,9 @@ if @address
 	json.usernname @address.username
 	json.mobile @address.mobile
 	json.address @address.address
+    json.province @address.province
+    json.city @address.city
+    json.district @address.district
 	json.is_default @address.is_default? ? true : ''
 else
 	json.code 1

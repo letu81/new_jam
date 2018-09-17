@@ -7,6 +7,18 @@ class Address < ApplicationRecord
 
 
     scope :active, -> { where(disable: false) }
+
+    def province
+    	self.province_id.blank? ? "" : ChinaRegion::Region.get(self.province_id.to_s.first(2)).name
+    end
+
+    def city
+    	self.city_id.blank? ? "" : ChinaRegion::Region.get(self.city_id.to_s.first(4)).name
+    end
+
+    def district
+    	self.district_id.blank? ? "" : ChinaRegion::Region.get(self.district_id.to_s).name
+    end
   
     def as_json(opts = {})
 	    {

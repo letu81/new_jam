@@ -5,8 +5,11 @@ if @address
 	json.mobile @address.mobile
 	json.address @address.address
     json.province @address.province
+    json.province_id @address.province_id
     json.city @address.city
+    json.city_id @address.city_id
     json.district @address.district
+    json.district_id @address.district_id
 	json.is_default @address.is_default? ? true : ''
 else
 	json.code 1

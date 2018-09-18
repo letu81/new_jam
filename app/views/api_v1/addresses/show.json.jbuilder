@@ -1,9 +1,12 @@
 if @address
     json.code 0
-	json.id @address.id
-	json.usernname @address.username
-	json.mobile @address.mobile
-	json.address @address.address
+	json.address_data do
+		json.id @address.id
+	  	json.mobile @address.mobile
+	  	json.username @address.username
+		json.address @address.address
+		json.post_code @address.post_code
+	end
     json.province @address.province
     json.province_id @address.province_id
     json.city @address.city

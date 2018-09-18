@@ -46,7 +46,7 @@ class ApiV1::AddressesController < ApplicationController
 		end
 	end
 
-    def destory
+    def destroy
     	@address = Address.where(user_id: current_user.id, id: params[:id]).first
     	if @address && @address.update_attribute(:disable, true)
 			render json: { code: 0, message: "ok" }
